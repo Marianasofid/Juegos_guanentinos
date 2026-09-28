@@ -1,0 +1,33 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--x:0;--y:0}
+html{scroll-behavior:smooth}
+body{min-height:100vh;padding:35px 0;font-family:Arial,sans-serif;color:#fff;background:#08060d;overflow-x:hidden}
+.background{position:fixed;inset:0;z-index:-1;overflow:hidden;background:radial-gradient(circle at 50% 0,#27132f,#0c0913 45%,#030307)}
+.orb{position:absolute;width:340px;height:340px;border-radius:50%;filter:blur(90px);opacity:.25;animation:float 11s ease-in-out infinite alternate}
+.one{background:#ff3cac;left:-100px;top:-100px}
+.two{background:#7048ff;right:-100px;top:30%;animation-delay:-4s}
+.three{background:#00d9ff;left:40%;bottom:-160px;animation-delay:-7s}
+@keyframes float{to{transform:translate(calc(var(--x)*30px + 35px),calc(var(--y)*25px + 30px)) scale(1.2)}}
+.stars{position:absolute;inset:0;opacity:.2;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:70px 70px;animation:stars 16s linear infinite}
+@keyframes stars{to{transform:translateY(70px)}}
+.hero{width:min(1050px,92%);margin:0 auto 45px;text-align:center}
+.label{display:inline-block;padding:9px 18px;border:1px solid #ffffff25;border-radius:999px;background:#ffffff09;color:#c9c0d5;font-size:12px;letter-spacing:1.4px;backdrop-filter:blur(10px)}
+h1{margin-top:20px;font-size:clamp(42px,7vw,78px);line-height:1;letter-spacing:2px}
+h1 span{color:#ff62c1;text-shadow:0 0 12px #ff62c1aa,0 0 35px #ff62c155}
+.hero p{margin:18px auto 0;color:#aaa1b5;font-size:18px}
+.line{width:110px;height:3px;margin:25px auto;background:#ff62c1;box-shadow:0 0 18px #ff62c1;animation:pulse 2s infinite}
+@keyframes pulse{50%{width:180px}}
+.games{width:min(1200px,92%);margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:24px}
+.game-card{position:relative;min-height:285px;padding:28px 24px;border:1px solid #ffffff20;border-radius:24px;background:#100d16bb;backdrop-filter:blur(13px);box-shadow:0 18px 45px #0006;transition:.3s}
+.game-card:hover{transform:translateY(-8px);border-color:currentColor;box-shadow:0 0 28px currentColor}
+.number{position:absolute;right:20px;top:18px;color:#ffffff40;font-weight:bold}
+.icon{font-size:55px;margin:15px 0 18px}
+.game-card h2{color:currentColor;margin-bottom:12px;font-size:23px}
+.game-card p{min-height:48px;margin-bottom:25px;color:#aaa;line-height:1.45}
+.play{display:inline-flex;gap:10px;padding:12px 22px;border-radius:999px;background:currentColor;color:#09070d;text-decoration:none;font-weight:800;transition:.2s}
+.play:hover{background:#fff;transform:scale(1.06)}
+.pink{color:#ff62c1}.purple{color:#9c6cff}.cyan{color:#32e6ff}.blue{color:#4d9fff}.green{color:#4dff9a}.orange{color:#ffab5c}.red{color:#ff6575}.gold{color:#ffd166}.yellow{color:#ffe45e}
+footer{width:min(1200px,92%);margin:50px auto 0;padding:25px 0;border-top:1px solid #ffffff1a;text-align:center;color:#777}
+footer span{margin:0 7px;color:#444}
+@media(max-width:600px){body{padding-top:25px}.games{grid-template-columns:1fr}h1{font-size:43px}.hero p{font-size:16px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}

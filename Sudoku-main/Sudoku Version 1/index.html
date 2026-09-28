@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sudoku</title>
+  <link rel="stylesheet" href="style.css" />
+<style>
+.back-home{position:fixed;z-index:999999;top:14px;left:14px;padding:10px 16px;border:2px solid #ff62c1;border-radius:999px;background:#08060de8;color:#fff!important;text-decoration:none!important;font:700 14px Arial;box-shadow:0 0 16px #ff62c144;backdrop-filter:blur(8px);transition:.2s}
+.back-home:hover{background:#ff62c1;color:#08060d!important;transform:scale(1.04)}
+</style></head>
+<body><a class="back-home" href="../../index.html">← Menú de juegos</a>
+  <div class="app">
+    <header class="header">
+      <h1>Sudoku</h1>
+      <div class="status">
+        <div class="stat"><span class="label">Timer:</span> <span id="timer">00:00</span></div>
+        <div class="stat"><span class="label">Moves:</span> <span id="moves">0</span></div>
+      </div>
+    </header>
+
+    <section class="controls">
+      <div class="left-controls">
+        <label for="difficulty" class="label">Difficulty</label>
+        <select id="difficulty" aria-label="Select difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="right-controls">
+        <button id="newGameBtn" class="btn">New Game</button>
+        <button id="checkBtn" class="btn" disabled>Check Solution</button>
+        <button id="solveBtn" class="btn btn-accent" disabled>Solve Puzzle</button>
+      </div>
+    </section>
+
+    <section class="howto" aria-live="polite">
+      <strong>How to start:</strong>
+      <span>1) Select a difficulty. 2) Click “New Game”. 3) Tap a cell and enter 1–9 (keyboard or on-screen keypad). Use Backspace/Delete or “Erase” to clear.</span>
+    </section>
+
+    <main class="board-wrapper">
+      <div id="board" class="board" role="grid" aria-label="Sudoku board"></div>
+    </main>
+
+    <section class="keypad" aria-label="Number keypad">
+      <button class="key" data-key="1">1</button>
+      <button class="key" data-key="2">2</button>
+      <button class="key" data-key="3">3</button>
+      <button class="key" data-key="4">4</button>
+      <button class="key" data-key="5">5</button>
+      <button class="key" data-key="6">6</button>
+      <button class="key" data-key="7">7</button>
+      <button class="key" data-key="8">8</button>
+      <button class="key" data-key="9">9</button>
+      <button class="key key-erase" data-key="erase">Erase</button>
+    </section>
+
+    <footer class="footer">
+      <p>Tip: Select a cell, then use your keyboard or the keypad to enter numbers.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

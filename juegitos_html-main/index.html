@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cóndor de Guanentá</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+.back-home{position:fixed;z-index:999999;top:14px;left:14px;padding:10px 16px;border:2px solid #ff62c1;border-radius:999px;background:#08060de8;color:#fff!important;text-decoration:none!important;font:700 14px Arial;box-shadow:0 0 16px #ff62c144;backdrop-filter:blur(8px);transition:.2s}
+.back-home:hover{background:#ff62c1;color:#08060d!important;transform:scale(1.04)}
+</style></head>
+<body><a class="back-home" href="../index.html">← Menú de juegos</a>
+
+<h1>Cóndor de Guanentá</h1>
+
+<div id="contenedor">
+    <canvas id="juego" width="400" height="600"></canvas>
+
+    <div id="gameOver" class="oculto">
+        <h2>¡El Cóndor cayó!</h2>
+        <p>Puntos: <span id="puntajeFinal">0</span></p>
+        <button onclick="reiniciarJuego()">Jugar otra vez</button>
+    </div>
+</div>
+
+<p>Presiona ESPACIO para volar.</p>
+
+<script src="script.js"></script>
+
+</body>
+</html>
